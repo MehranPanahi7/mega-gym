@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Nazanin";
+  src: url("/assets/fonts/nazanin.TTF");
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.header {
+  background-image: url("/assets/bg2.jpg");
+  background-size: cover;
+  background-repeat: space;
+  background-clip: content-box;
+}
+
+.form-bg {
+  background-image: url("/assets/formbg.jpg");
+  background-size: cover;
+  background-clip: content-box;
+  background-position: center;
+}
+
+.form-bg1 {
+  background-image: url("/assets/formbg1.jpg");
+  background-size: cover;
+  background-clip: content-box;
+  background-position: center;
+}
+
+.form-bg2 {
+  background-image: url("/assets/formbg2.jpg");
+  background-size: cover;
+  background-clip: content-box;
+  background-position: center;
+}
+
+.font-fantasy {
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
+}
+
+.font-playwrite {
+  font-family: "Playwrite", cursive;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.font-nazanin {
+  font-family: "Nazanin", cursive;
+}
+
+.information {
+  background-image: url("/assets/bg3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: content-box;
+  background-color: rgb(26, 26, 26);
+  background-blend-mode: overlay;
+}
+
+.rtl {
+  direction: rtl;
+}
