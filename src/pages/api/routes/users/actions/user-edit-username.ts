@@ -36,6 +36,25 @@ export default async function EditUsernameHandler(
     const user_id = decoded.user_id;
     if (!user_id) return res.status(404).json({ message: "کاربر پیدا نشد." });
 
+    // تنظیم محدودیت تغییر در یک هفته
+    const oneWeekAgo = new Date();
+    oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+
+    const changeCount = await prisma.username_changes({
+      where: {
+        user_id,
+        changed_at: {
+          gte: oneWeekAgo,
+        },
+      },
+    });
+
+    if (changeCount >= 5)
+      return res.status(429).json({
+        message: "شما فقط میتوانید 5 بار در هفته نام کاربری خود را تغییر دهید.",
+      });
+
+    // کوئری تغییر نام کاربری
     const editUsername = await prisma.users.update({
       where: { user_id: user_id },
       data: { username: newUsername },

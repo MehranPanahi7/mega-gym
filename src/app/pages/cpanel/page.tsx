@@ -111,7 +111,7 @@ export default function UserControlPanelPage() {
             <li className="flex justify-between items-center text-[25px] my-4 bg-purple-400 w-full md:w-1/2 p-4 rounded-xl shadow-xl">
               <div className="flex-1">
                 <span className="mx-4">رمز عبور: </span>
-                <span>{data?.user.user_password}</span>
+                <span>********</span>
               </div>
               <button
                 className="bg-gray-500 outline-none p-4 rounded-lg hover:bg-gray-400"

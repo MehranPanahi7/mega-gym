@@ -36,7 +36,6 @@ export default function Article() {
         <ul className="text-[25px] font-semibold gap-6 rtl border-b-2 md:border-b-0 md:border-r-2 border-gray-600 py-6 md:px-9">
           <li className="my-4">روزانه : 1/500/000 تومان</li>
           <li className="my-4">روز در میان : 1/000/000 تومان</li>
-          <li className="my-4">استفاده از هوازی : 500/000 تومان</li>
         </ul>
       </div>
 

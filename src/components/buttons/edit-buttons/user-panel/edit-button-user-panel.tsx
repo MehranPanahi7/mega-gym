@@ -92,6 +92,7 @@ export default function EditInformation({ onClose, field }: Props) {
   useEffect(() => {
     if (success) onClose();
   }, [onClose, success]);
+
   return (
     <div className="flex justify-center items-center w-full p-4 md:w-1/2 flex-col bg-white rtl rounded-md">
       <div className="p-2 flex justify-center items-center w-full flex-col">
