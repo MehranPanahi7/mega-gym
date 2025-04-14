@@ -40,7 +40,7 @@ export default async function EditUsernameHandler(
     const oneWeekAgo = new Date();
     oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
 
-    const changeCount = await prisma.username_changes({
+    const changeCount = await prisma.username_changes.count({
       where: {
         user_id,
         changed_at: {
